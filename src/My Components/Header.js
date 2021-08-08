@@ -6,6 +6,10 @@ class Header extends Component {
         super(props);
     }
 
+    handleChange(evt) {
+        console.log(evt.target.value);
+    }
+
     render() {
         const {
             isRunning,
@@ -44,6 +48,7 @@ class Header extends Component {
                                 max="100"
                                 style={{ background: color, cursor: cursor }}
                                 disabled={isRunning ? "disabled" : null}
+                                onChange={this.handleChange}
                             />
                             <div style={{ display: 'inline-block', width: '50px' }} />
                             <li className="nav-item">
